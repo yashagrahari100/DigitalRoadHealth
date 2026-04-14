@@ -1,0 +1,9 @@
+fastapi==0.111.0
+uvicorn==0.30.1
+sqlalchemy==2.0.31
+scikit-learn==1.4.2
+pandas==2.2.2
+pydantic==2.8.2
+pydantic-settings
+scipy==1.13.1
+psycopg2-binary==2.9.9

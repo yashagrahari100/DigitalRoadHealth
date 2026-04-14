@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_94664e70e5c4a3dbddbbb0d716c696e8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_94664e70e5c4a3dbddbbb0d716c696e8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_94664e70e5c4a3dbddbbb0d716c696e8 = L.map(
+                "map_94664e70e5c4a3dbddbbb0d716c696e8",
+                {
+                    center: [18.510190279459138, 73.86790579718497],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_51f185e57af9d6911581d9164cfe1b6b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_51f185e57af9d6911581d9164cfe1b6b.addTo(map_94664e70e5c4a3dbddbbb0d716c696e8);
+        
+    
+            var marker_cluster_9be3775ad1765f8d69a38b16180783d4 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_045b7c42bc5bb751309857a113dec878 = L.marker(
+                [18.5204, 73.8567],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_fb830297ffcd51ccf06cf08350678274 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "road",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_136c865b064da8678364d540c81ecb92 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f83ce5469cb6a9d7bb86fccf072df457 = $(`<div id="html_f83ce5469cb6a9d7bb86fccf072df457" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Speed_Breaker<br><b>Severity:</b> Medium<br><b>Reports:</b> 7<br><b>Time:</b> 2026-04-11 11:39:42.270451</div>`)[0];
+                popup_136c865b064da8678364d540c81ecb92.setContent(html_f83ce5469cb6a9d7bb86fccf072df457);
+            
+        
+
+        marker_045b7c42bc5bb751309857a113dec878.bindPopup(popup_136c865b064da8678364d540c81ecb92)
+        ;
+
+        
+    
+    
+            marker_045b7c42bc5bb751309857a113dec878.bindTooltip(
+                `<div>
+                     Speed_Breaker (Medium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_045b7c42bc5bb751309857a113dec878.setIcon(icon_fb830297ffcd51ccf06cf08350678274);
+            
+    
+            var marker_541ea126bf7dfbd84de116ab839ed26d = L.marker(
+                [18.520471036976566, 73.85679126954057],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_94c612d4118a3f4769474b8dcbb063cd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16b21c0c173d39b55d83ff308ac2814b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f6f520a36e4ff43d314518e4c8a7f4c4 = $(`<div id="html_f6f520a36e4ff43d314518e4c8a7f4c4" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Pothole<br><b>Severity:</b> Low<br><b>Reports:</b> 4<br><b>Time:</b> 2026-04-11 11:40:13.360958</div>`)[0];
+                popup_16b21c0c173d39b55d83ff308ac2814b.setContent(html_f6f520a36e4ff43d314518e4c8a7f4c4);
+            
+        
+
+        marker_541ea126bf7dfbd84de116ab839ed26d.bindPopup(popup_16b21c0c173d39b55d83ff308ac2814b)
+        ;
+
+        
+    
+    
+            marker_541ea126bf7dfbd84de116ab839ed26d.bindTooltip(
+                `<div>
+                     Pothole (Low)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_541ea126bf7dfbd84de116ab839ed26d.setIcon(icon_94c612d4118a3f4769474b8dcbb063cd);
+            
+    
+            var marker_33facd1651ddf4eb62c2b809da8b14dc = L.marker(
+                [18.5203127495019, 73.8567654600838],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_495fd3c09480172e6fb35f4e9c87698c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_48a84557292fe6e86a768a8f54a5f2ad = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3efd8d5dff012bcfe4cce21a423620b6 = $(`<div id="html_3efd8d5dff012bcfe4cce21a423620b6" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Pothole<br><b>Severity:</b> High<br><b>Reports:</b> 4<br><b>Time:</b> 2026-04-11 11:40:13.503781</div>`)[0];
+                popup_48a84557292fe6e86a768a8f54a5f2ad.setContent(html_3efd8d5dff012bcfe4cce21a423620b6);
+            
+        
+
+        marker_33facd1651ddf4eb62c2b809da8b14dc.bindPopup(popup_48a84557292fe6e86a768a8f54a5f2ad)
+        ;
+
+        
+    
+    
+            marker_33facd1651ddf4eb62c2b809da8b14dc.bindTooltip(
+                `<div>
+                     Pothole (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_33facd1651ddf4eb62c2b809da8b14dc.setIcon(icon_495fd3c09480172e6fb35f4e9c87698c);
+            
+    
+            var marker_354683ee3507e07f7a408b4c5f465a13 = L.marker(
+                [18.5092883, 73.8694767],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_b23aaaa3f4fc14c8cfc39b236acce781 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3104d1fcc2b537beacfc15fc6595a7b3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8757108fe6c2e3f9f59e49e64d34570e = $(`<div id="html_8757108fe6c2e3f9f59e49e64d34570e" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Pothole<br><b>Severity:</b> Medium<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:25:38.459532</div>`)[0];
+                popup_3104d1fcc2b537beacfc15fc6595a7b3.setContent(html_8757108fe6c2e3f9f59e49e64d34570e);
+            
+        
+
+        marker_354683ee3507e07f7a408b4c5f465a13.bindPopup(popup_3104d1fcc2b537beacfc15fc6595a7b3)
+        ;
+
+        
+    
+    
+            marker_354683ee3507e07f7a408b4c5f465a13.bindTooltip(
+                `<div>
+                     Pothole (Medium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_354683ee3507e07f7a408b4c5f465a13.setIcon(icon_b23aaaa3f4fc14c8cfc39b236acce781);
+            
+    
+            var marker_494b11e9aa493fb9a0db16597c386e43 = L.marker(
+                [18.5092817, 73.86918],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_5bd744102b1026274e16103bf6ba1b7c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_97a7dcfe7b0211dbd8054236c6b5cef4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7aa432bee5f3e98ec52df45766f50729 = $(`<div id="html_7aa432bee5f3e98ec52df45766f50729" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Pothole<br><b>Severity:</b> Medium<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:25:43.289247</div>`)[0];
+                popup_97a7dcfe7b0211dbd8054236c6b5cef4.setContent(html_7aa432bee5f3e98ec52df45766f50729);
+            
+        
+
+        marker_494b11e9aa493fb9a0db16597c386e43.bindPopup(popup_97a7dcfe7b0211dbd8054236c6b5cef4)
+        ;
+
+        
+    
+    
+            marker_494b11e9aa493fb9a0db16597c386e43.bindTooltip(
+                `<div>
+                     Pothole (Medium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_494b11e9aa493fb9a0db16597c386e43.setIcon(icon_5bd744102b1026274e16103bf6ba1b7c);
+            
+    
+            var marker_4ce0ec2aef7330b3bc6fa4abc27ba348 = L.marker(
+                [18.5092733, 73.86896],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_ce4d7c5a2b5e56a40f68da3371d9f13d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "road",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_af1439fb7fc63e17b17c124b424cbf29 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_530d202b6f774c93875bbd532b74ff24 = $(`<div id="html_530d202b6f774c93875bbd532b74ff24" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Speedbreaker<br><b>Severity:</b> High<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:25:48.437451</div>`)[0];
+                popup_af1439fb7fc63e17b17c124b424cbf29.setContent(html_530d202b6f774c93875bbd532b74ff24);
+            
+        
+
+        marker_4ce0ec2aef7330b3bc6fa4abc27ba348.bindPopup(popup_af1439fb7fc63e17b17c124b424cbf29)
+        ;
+
+        
+    
+    
+            marker_4ce0ec2aef7330b3bc6fa4abc27ba348.bindTooltip(
+                `<div>
+                     Speedbreaker (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4ce0ec2aef7330b3bc6fa4abc27ba348.setIcon(icon_ce4d7c5a2b5e56a40f68da3371d9f13d);
+            
+    
+            var marker_0d93d9a4d254b58f7f99b5635d413611 = L.marker(
+                [18.5092367, 73.86875],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_fae660257ab5f8ecffef4ac140010284 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "road",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f24dc20314902824be6041ca13b6578f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4f6f684a2c09aa8968baac6b30595b01 = $(`<div id="html_4f6f684a2c09aa8968baac6b30595b01" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Speedbreaker<br><b>Severity:</b> Medium<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:25:53.371097</div>`)[0];
+                popup_f24dc20314902824be6041ca13b6578f.setContent(html_4f6f684a2c09aa8968baac6b30595b01);
+            
+        
+
+        marker_0d93d9a4d254b58f7f99b5635d413611.bindPopup(popup_f24dc20314902824be6041ca13b6578f)
+        ;
+
+        
+    
+    
+            marker_0d93d9a4d254b58f7f99b5635d413611.bindTooltip(
+                `<div>
+                     Speedbreaker (Medium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0d93d9a4d254b58f7f99b5635d413611.setIcon(icon_fae660257ab5f8ecffef4ac140010284);
+            
+    
+            var marker_d0ac786c86109f950f09b6c4b67f3a10 = L.marker(
+                [18.50923, 73.868535],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_35251fcc3757bc4b7095e2784992e7fc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "road",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77785abe4cb4e0774a8d3db4ed5caf8b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_421494d06047abc6974be6ce28cca6fc = $(`<div id="html_421494d06047abc6974be6ce28cca6fc" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Speedbreaker<br><b>Severity:</b> High<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:25:58.439489</div>`)[0];
+                popup_77785abe4cb4e0774a8d3db4ed5caf8b.setContent(html_421494d06047abc6974be6ce28cca6fc);
+            
+        
+
+        marker_d0ac786c86109f950f09b6c4b67f3a10.bindPopup(popup_77785abe4cb4e0774a8d3db4ed5caf8b)
+        ;
+
+        
+    
+    
+            marker_d0ac786c86109f950f09b6c4b67f3a10.bindTooltip(
+                `<div>
+                     Speedbreaker (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d0ac786c86109f950f09b6c4b67f3a10.setIcon(icon_35251fcc3757bc4b7095e2784992e7fc);
+            
+    
+            var marker_18a5322621539e0da31288cbd572fe63 = L.marker(
+                [18.5092033, 73.8682983],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_37a8f1585cd8021a3f93a12c82e130c3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d5b5ffcdae0b4e45b270a2086bc6044a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_db66801a8dcfc5d64da1d98e2e21e30c = $(`<div id="html_db66801a8dcfc5d64da1d98e2e21e30c" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Pothole<br><b>Severity:</b> Medium<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:26:03.434372</div>`)[0];
+                popup_d5b5ffcdae0b4e45b270a2086bc6044a.setContent(html_db66801a8dcfc5d64da1d98e2e21e30c);
+            
+        
+
+        marker_18a5322621539e0da31288cbd572fe63.bindPopup(popup_d5b5ffcdae0b4e45b270a2086bc6044a)
+        ;
+
+        
+    
+    
+            marker_18a5322621539e0da31288cbd572fe63.bindTooltip(
+                `<div>
+                     Pothole (Medium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_18a5322621539e0da31288cbd572fe63.setIcon(icon_37a8f1585cd8021a3f93a12c82e130c3);
+            
+    
+            var marker_754e33838ac0cb0f9fb16b368e29dae4 = L.marker(
+                [18.5086333, 73.8683083],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_a43d99a9df532eb3ad9651f90abbaa25 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "road",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a87a369c9df19b1cb22fd7283f72eaf4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c93a2e34d1c50880171c518ec137099a = $(`<div id="html_c93a2e34d1c50880171c518ec137099a" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Speedbreaker<br><b>Severity:</b> High<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:26:14.029233</div>`)[0];
+                popup_a87a369c9df19b1cb22fd7283f72eaf4.setContent(html_c93a2e34d1c50880171c518ec137099a);
+            
+        
+
+        marker_754e33838ac0cb0f9fb16b368e29dae4.bindPopup(popup_a87a369c9df19b1cb22fd7283f72eaf4)
+        ;
+
+        
+    
+    
+            marker_754e33838ac0cb0f9fb16b368e29dae4.bindTooltip(
+                `<div>
+                     Speedbreaker (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_754e33838ac0cb0f9fb16b368e29dae4.setIcon(icon_a43d99a9df532eb3ad9651f90abbaa25);
+            
+    
+            var marker_43e2a69a313fb48f067b88359e7ac8a1 = L.marker(
+                [18.5084433, 73.868365],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_fbf466e6fcb8b3ca6afa750b2b9b666a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bac2d8ca9bb39a9a628d7439bf538e80 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_60cc2f2e95e790ad9e094c7edcd7869d = $(`<div id="html_60cc2f2e95e790ad9e094c7edcd7869d" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Pothole<br><b>Severity:</b> High<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:26:19.138795</div>`)[0];
+                popup_bac2d8ca9bb39a9a628d7439bf538e80.setContent(html_60cc2f2e95e790ad9e094c7edcd7869d);
+            
+        
+
+        marker_43e2a69a313fb48f067b88359e7ac8a1.bindPopup(popup_bac2d8ca9bb39a9a628d7439bf538e80)
+        ;
+
+        
+    
+    
+            marker_43e2a69a313fb48f067b88359e7ac8a1.bindTooltip(
+                `<div>
+                     Pothole (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_43e2a69a313fb48f067b88359e7ac8a1.setIcon(icon_fbf466e6fcb8b3ca6afa750b2b9b666a);
+            
+    
+            var marker_3461f9b9713e65673888dd160d7d9211 = L.marker(
+                [18.5084317, 73.8688083],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_219e9ec2ab54b83b9cdb14385bce588c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "road",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f1307c802d67f0a31487b88364aacbbd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3c311ced44fa78f45cab91ccaaa0befa = $(`<div id="html_3c311ced44fa78f45cab91ccaaa0befa" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Speedbreaker<br><b>Severity:</b> High<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:26:29.152036</div>`)[0];
+                popup_f1307c802d67f0a31487b88364aacbbd.setContent(html_3c311ced44fa78f45cab91ccaaa0befa);
+            
+        
+
+        marker_3461f9b9713e65673888dd160d7d9211.bindPopup(popup_f1307c802d67f0a31487b88364aacbbd)
+        ;
+
+        
+    
+    
+            marker_3461f9b9713e65673888dd160d7d9211.bindTooltip(
+                `<div>
+                     Speedbreaker (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3461f9b9713e65673888dd160d7d9211.setIcon(icon_219e9ec2ab54b83b9cdb14385bce588c);
+            
+    
+            var marker_d0551e45fe13f1b61acfdfebe228c885 = L.marker(
+                [18.50845, 73.8690833],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_3f99134f00b27c757357e7b5f3eb2e60 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "road",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9d5ed17b118251f88eeded77d2839a20 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d069022a3d8313da996814a8057eed1b = $(`<div id="html_d069022a3d8313da996814a8057eed1b" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Speedbreaker<br><b>Severity:</b> Medium<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:26:34.042552</div>`)[0];
+                popup_9d5ed17b118251f88eeded77d2839a20.setContent(html_d069022a3d8313da996814a8057eed1b);
+            
+        
+
+        marker_d0551e45fe13f1b61acfdfebe228c885.bindPopup(popup_9d5ed17b118251f88eeded77d2839a20)
+        ;
+
+        
+    
+    
+            marker_d0551e45fe13f1b61acfdfebe228c885.bindTooltip(
+                `<div>
+                     Speedbreaker (Medium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d0551e45fe13f1b61acfdfebe228c885.setIcon(icon_3f99134f00b27c757357e7b5f3eb2e60);
+            
+    
+            var marker_330f29771b3d73d4d896dd9b5c3a4f40 = L.marker(
+                [18.5084433, 73.8694067],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_7d8e927855f5660fefd666e3e2fa1890 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "road",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d5ce52cd26dff14103cbb4f9cfb471e2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_11213275410c7c876f40544f149a9832 = $(`<div id="html_11213275410c7c876f40544f149a9832" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Speedbreaker<br><b>Severity:</b> High<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:26:39.163298</div>`)[0];
+                popup_d5ce52cd26dff14103cbb4f9cfb471e2.setContent(html_11213275410c7c876f40544f149a9832);
+            
+        
+
+        marker_330f29771b3d73d4d896dd9b5c3a4f40.bindPopup(popup_d5ce52cd26dff14103cbb4f9cfb471e2)
+        ;
+
+        
+    
+    
+            marker_330f29771b3d73d4d896dd9b5c3a4f40.bindTooltip(
+                `<div>
+                     Speedbreaker (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_330f29771b3d73d4d896dd9b5c3a4f40.setIcon(icon_7d8e927855f5660fefd666e3e2fa1890);
+            
+    
+            var marker_72c94c329a0e8e15742011a98663fce8 = L.marker(
+                [18.5084233, 73.8696717],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_cba71cca8d14ea2f1b3278dfd684b8b0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd69ea0b04235f95114ba4eafae634ac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_75ad838136032fe1e4f322239548eb61 = $(`<div id="html_75ad838136032fe1e4f322239548eb61" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Pothole<br><b>Severity:</b> Medium<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:26:44.102577</div>`)[0];
+                popup_cd69ea0b04235f95114ba4eafae634ac.setContent(html_75ad838136032fe1e4f322239548eb61);
+            
+        
+
+        marker_72c94c329a0e8e15742011a98663fce8.bindPopup(popup_cd69ea0b04235f95114ba4eafae634ac)
+        ;
+
+        
+    
+    
+            marker_72c94c329a0e8e15742011a98663fce8.bindTooltip(
+                `<div>
+                     Pothole (Medium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_72c94c329a0e8e15742011a98663fce8.setIcon(icon_cba71cca8d14ea2f1b3278dfd684b8b0);
+            
+    
+            var marker_38e8a545c343143db0b9e856359674c2 = L.marker(
+                [18.50839, 73.8699183],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_c7be0ae6631fd0744b00d4f9ec4ab155 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "road",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9cb02fd4bb6f0a34410f320dcd1c9eb4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e7960c9adc5d7c584e764455f95b04ed = $(`<div id="html_e7960c9adc5d7c584e764455f95b04ed" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Speedbreaker<br><b>Severity:</b> High<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:26:49.228346</div>`)[0];
+                popup_9cb02fd4bb6f0a34410f320dcd1c9eb4.setContent(html_e7960c9adc5d7c584e764455f95b04ed);
+            
+        
+
+        marker_38e8a545c343143db0b9e856359674c2.bindPopup(popup_9cb02fd4bb6f0a34410f320dcd1c9eb4)
+        ;
+
+        
+    
+    
+            marker_38e8a545c343143db0b9e856359674c2.bindTooltip(
+                `<div>
+                     Speedbreaker (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_38e8a545c343143db0b9e856359674c2.setIcon(icon_c7be0ae6631fd0744b00d4f9ec4ab155);
+            
+    
+            var marker_7abd9b651d816b564a6ab2d40d7e96da = L.marker(
+                [18.508125, 73.8700167],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_aa5009facdb81a3dae809619b1dd3d4c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f7c14c498d3688e7f75acb3fa4f85888 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c31ebc51a0ac14d7698dca6fe0e84a1b = $(`<div id="html_c31ebc51a0ac14d7698dca6fe0e84a1b" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Pothole<br><b>Severity:</b> Medium<br><b>Reports:</b> 3<br><b>Time:</b> 2026-04-14 12:26:59.048085</div>`)[0];
+                popup_f7c14c498d3688e7f75acb3fa4f85888.setContent(html_c31ebc51a0ac14d7698dca6fe0e84a1b);
+            
+        
+
+        marker_7abd9b651d816b564a6ab2d40d7e96da.bindPopup(popup_f7c14c498d3688e7f75acb3fa4f85888)
+        ;
+
+        
+    
+    
+            marker_7abd9b651d816b564a6ab2d40d7e96da.bindTooltip(
+                `<div>
+                     Pothole (Medium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7abd9b651d816b564a6ab2d40d7e96da.setIcon(icon_aa5009facdb81a3dae809619b1dd3d4c);
+            
+    
+            var marker_5bf5645721a2ae6173fe58d6ea222671 = L.marker(
+                [18.5077517, 73.8700883],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_8dbae7396f0a3516e7438aba3bd1d34d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "road",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_85e150a0f9f1fb27f5c157a70380b581 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_48457ac9823f21bddfa5ebc95cd7a870 = $(`<div id="html_48457ac9823f21bddfa5ebc95cd7a870" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Speedbreaker<br><b>Severity:</b> Low<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:27:12.579095</div>`)[0];
+                popup_85e150a0f9f1fb27f5c157a70380b581.setContent(html_48457ac9823f21bddfa5ebc95cd7a870);
+            
+        
+
+        marker_5bf5645721a2ae6173fe58d6ea222671.bindPopup(popup_85e150a0f9f1fb27f5c157a70380b581)
+        ;
+
+        
+    
+    
+            marker_5bf5645721a2ae6173fe58d6ea222671.bindTooltip(
+                `<div>
+                     Speedbreaker (Low)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5bf5645721a2ae6173fe58d6ea222671.setIcon(icon_8dbae7396f0a3516e7438aba3bd1d34d);
+            
+    
+            var marker_25423ea8cd2b3cf61c18193fca16c920 = L.marker(
+                [18.5079117, 73.8700633],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_4f76741c21a717149afede139ac9ce01 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "road",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f0a3be114387c1eb8a94d2685a6649b6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ad054f54164658197ba9e14c046c3f3a = $(`<div id="html_ad054f54164658197ba9e14c046c3f3a" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Speedbreaker<br><b>Severity:</b> High<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:27:52.750045</div>`)[0];
+                popup_f0a3be114387c1eb8a94d2685a6649b6.setContent(html_ad054f54164658197ba9e14c046c3f3a);
+            
+        
+
+        marker_25423ea8cd2b3cf61c18193fca16c920.bindPopup(popup_f0a3be114387c1eb8a94d2685a6649b6)
+        ;
+
+        
+    
+    
+            marker_25423ea8cd2b3cf61c18193fca16c920.bindTooltip(
+                `<div>
+                     Speedbreaker (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_25423ea8cd2b3cf61c18193fca16c920.setIcon(icon_4f76741c21a717149afede139ac9ce01);
+            
+    
+            var marker_e439017ee19726a41674c0ef763cd162 = L.marker(
+                [18.508385, 73.8700267],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_ee8ba102293c4b7b21b05bb1ebf1c18e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f4c8f8bc32acc36c546d01c9797f30df = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c11c1bad0f4158beba22b8029963e895 = $(`<div id="html_c11c1bad0f4158beba22b8029963e895" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Pothole<br><b>Severity:</b> Medium<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:28:02.653764</div>`)[0];
+                popup_f4c8f8bc32acc36c546d01c9797f30df.setContent(html_c11c1bad0f4158beba22b8029963e895);
+            
+        
+
+        marker_e439017ee19726a41674c0ef763cd162.bindPopup(popup_f4c8f8bc32acc36c546d01c9797f30df)
+        ;
+
+        
+    
+    
+            marker_e439017ee19726a41674c0ef763cd162.bindTooltip(
+                `<div>
+                     Pothole (Medium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e439017ee19726a41674c0ef763cd162.setIcon(icon_ee8ba102293c4b7b21b05bb1ebf1c18e);
+            
+    
+            var marker_c555dd6b0b903417ef3f6c1cc3619cd9 = L.marker(
+                [18.5089383, 73.8700983],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_0658399c23b3333f25fcbdf288c53572 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "road",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5a9924d066711c9459366ef839c640b2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f2d4f353934023007f4075a2a3f87c41 = $(`<div id="html_f2d4f353934023007f4075a2a3f87c41" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Speedbreaker<br><b>Severity:</b> Medium<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:28:14.845084</div>`)[0];
+                popup_5a9924d066711c9459366ef839c640b2.setContent(html_f2d4f353934023007f4075a2a3f87c41);
+            
+        
+
+        marker_c555dd6b0b903417ef3f6c1cc3619cd9.bindPopup(popup_5a9924d066711c9459366ef839c640b2)
+        ;
+
+        
+    
+    
+            marker_c555dd6b0b903417ef3f6c1cc3619cd9.bindTooltip(
+                `<div>
+                     Speedbreaker (Medium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c555dd6b0b903417ef3f6c1cc3619cd9.setIcon(icon_0658399c23b3333f25fcbdf288c53572);
+            
+    
+            var marker_3afe37f699e00ab5fd9f8649bb89d2a7 = L.marker(
+                [18.509135, 73.8701117],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_2f53433f57db56789bbf7705f048c13c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f1f5b7b5f09a96a5a9b0cd2f8501f342 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_013809ae8bbd8d08d25831155394fca6 = $(`<div id="html_013809ae8bbd8d08d25831155394fca6" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Pothole<br><b>Severity:</b> Medium<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:28:19.744265</div>`)[0];
+                popup_f1f5b7b5f09a96a5a9b0cd2f8501f342.setContent(html_013809ae8bbd8d08d25831155394fca6);
+            
+        
+
+        marker_3afe37f699e00ab5fd9f8649bb89d2a7.bindPopup(popup_f1f5b7b5f09a96a5a9b0cd2f8501f342)
+        ;
+
+        
+    
+    
+            marker_3afe37f699e00ab5fd9f8649bb89d2a7.bindTooltip(
+                `<div>
+                     Pothole (Medium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3afe37f699e00ab5fd9f8649bb89d2a7.setIcon(icon_2f53433f57db56789bbf7705f048c13c);
+            
+    
+            var marker_7d075747c6ff4bc9734fc72b7ea1eb8f = L.marker(
+                [18.5096383, 73.8700533],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_4ca3bd828d49c4badf109a6a3789a4d7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7ce7010c7d96d5f9e977c933233e9697 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_492c328d5fd2a4d5ff070516b4ae8514 = $(`<div id="html_492c328d5fd2a4d5ff070516b4ae8514" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Pothole<br><b>Severity:</b> Medium<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:30:27.070910</div>`)[0];
+                popup_7ce7010c7d96d5f9e977c933233e9697.setContent(html_492c328d5fd2a4d5ff070516b4ae8514);
+            
+        
+
+        marker_7d075747c6ff4bc9734fc72b7ea1eb8f.bindPopup(popup_7ce7010c7d96d5f9e977c933233e9697)
+        ;
+
+        
+    
+    
+            marker_7d075747c6ff4bc9734fc72b7ea1eb8f.bindTooltip(
+                `<div>
+                     Pothole (Medium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7d075747c6ff4bc9734fc72b7ea1eb8f.setIcon(icon_4ca3bd828d49c4badf109a6a3789a4d7);
+            
+    
+            var marker_7cb1fd49f35e0c89cf2af58ab1a8487d = L.marker(
+                [18.5096883, 73.870055],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_2ec56a2080ee31f70de7fee908c8b19e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "road",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d52fb18929e5445e3e1ab7158e3d5832 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f00ae559a1e9ca5f2ebfcd309428535a = $(`<div id="html_f00ae559a1e9ca5f2ebfcd309428535a" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Speedbreaker<br><b>Severity:</b> Medium<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:30:27.117640</div>`)[0];
+                popup_d52fb18929e5445e3e1ab7158e3d5832.setContent(html_f00ae559a1e9ca5f2ebfcd309428535a);
+            
+        
+
+        marker_7cb1fd49f35e0c89cf2af58ab1a8487d.bindPopup(popup_d52fb18929e5445e3e1ab7158e3d5832)
+        ;
+
+        
+    
+    
+            marker_7cb1fd49f35e0c89cf2af58ab1a8487d.bindTooltip(
+                `<div>
+                     Speedbreaker (Medium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7cb1fd49f35e0c89cf2af58ab1a8487d.setIcon(icon_2ec56a2080ee31f70de7fee908c8b19e);
+            
+    
+            var marker_bc0f31f9ff1b23143c6eef990ddb4f79 = L.marker(
+                [18.5092717, 73.8701133],
+                {
+}
+            ).addTo(marker_cluster_9be3775ad1765f8d69a38b16180783d4);
+        
+    
+            var icon_b3d9207ea44cef1d1eeaa81aa1926c45 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "road",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8065cf49f9c031470913d931a008f94d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5eaf3e5196df388a899349ba2797a601 = $(`<div id="html_5eaf3e5196df388a899349ba2797a601" style="width: 100.0%; height: 100.0%;"><b>Type:</b> Speedbreaker<br><b>Severity:</b> High<br><b>Reports:</b> 1<br><b>Time:</b> 2026-04-14 12:30:27.136417</div>`)[0];
+                popup_8065cf49f9c031470913d931a008f94d.setContent(html_5eaf3e5196df388a899349ba2797a601);
+            
+        
+
+        marker_bc0f31f9ff1b23143c6eef990ddb4f79.bindPopup(popup_8065cf49f9c031470913d931a008f94d)
+        ;
+
+        
+    
+    
+            marker_bc0f31f9ff1b23143c6eef990ddb4f79.bindTooltip(
+                `<div>
+                     Speedbreaker (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bc0f31f9ff1b23143c6eef990ddb4f79.setIcon(icon_b3d9207ea44cef1d1eeaa81aa1926c45);
+            
+    
+            marker_cluster_9be3775ad1765f8d69a38b16180783d4.addTo(map_94664e70e5c4a3dbddbbb0d716c696e8);
+        
+</script>
+</html>

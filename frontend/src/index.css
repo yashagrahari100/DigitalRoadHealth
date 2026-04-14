@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-900: #0B0F19;
+  --color-dark-800: #141A28;
+  --color-dark-700: #1E293B;
+  --color-dark-600: #334155;
+  
+  --color-accent-400: #818cf8;
+  --color-accent-500: #6366f1;
+  --color-accent-600: #4f46e5;
+  
+  --color-anomaly-pothole: #f43f5e;
+  --color-anomaly-speed_breaker: #06b6d4;
+  
+  --background-image-glass: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.4) 100%);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+#root {
+  height: 100%;
+}
+
+.dark-popup .leaflet-popup-content-wrapper,
+.dark-popup .leaflet-popup-tip {
+  background-color: var(--color-dark-800, #141A28) !important;
+  color: #fff !important;
+}
+
+.light-popup .leaflet-popup-content-wrapper,
+.light-popup .leaflet-popup-tip {
+  background-color: #ffffff !important;
+  color: var(--color-dark-900, #0B0F19) !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Removed restrictive leaflet-container to allow full screen map */
+.leaflet-container {
+  background-color: #0B0F19; /* matches dark-900 */
+}
+
+/* Custom Webkit Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.2); 
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.4); 
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.8); 
+}

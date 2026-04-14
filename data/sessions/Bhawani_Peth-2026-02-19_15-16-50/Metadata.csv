@@ -1,0 +1,2 @@
+version,device name,recording epoch time,recording time,recording timezone,platform,appVersion,device id,sensors,sampleRateMs,standardisation
+3,vivo 1915,1771514210819,2026-02-19_15-16-50,Asia/Kolkata,android,1.52.0,6ed5cc21-92c8-4fa1-b840-2b2319b394bf,Accelerometer|Gyroscope|Orientation|Location|Annotation|TotalAcceleration|GyroscopeUncalibrated|AccelerometerUncalibrated,10|10|10|0||10|10|10,true
