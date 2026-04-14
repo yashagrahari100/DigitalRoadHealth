@@ -80,8 +80,8 @@ object ApiClient {
     // Toggle this to switch between local dev and cloud production
     const val USE_CLOUD = false
 
-    // Local FastAPI (for physical device over Hotspot)
-    private const val LOCAL_BASE_URL = "http://10.64.43.151:8000"
+    // Deployed FastAPI Python Server (Render Cloud)
+    private const val LOCAL_BASE_URL = "https://digital-road-health-api.onrender.com"
 
     // Supabase Cloud
     const val SUPABASE_URL = "https://spbmkcmcdtqebammaarf.supabase.co"

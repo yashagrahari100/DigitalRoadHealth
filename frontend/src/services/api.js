@@ -20,7 +20,7 @@ const supabase = axios.create({
 // ──────────────────────────────────────────────
 // Local FastAPI fallback (for development)
 // ──────────────────────────────────────────────
-const LOCAL_API_URL = 'http://127.0.0.1:8000/api';
+const LOCAL_API_URL = 'https://digital-road-health-api.onrender.com/api';
 
 // Toggle: set to true to use cloud Supabase, false for local dev
 const USE_CLOUD = true;
