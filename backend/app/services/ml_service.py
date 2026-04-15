@@ -2,6 +2,7 @@ import joblib
 import pandas as pd
 import numpy as np
 from scipy import signal
+from scipy.stats import skew, kurtosis
 from typing import Tuple, Optional, Dict, Any, List
 import os
 
@@ -57,7 +58,11 @@ def extract_features(readings: List[Dict[str, Any]]) -> Optional[pd.DataFrame]:
         'gyr_max': float(np.max(gyro_mag)),
         'gyr_min': float(np.min(gyro_mag)),
         'gyr_std': float(np.std(gyro_mag)),
-        'gyr_jerk': float(np.max(gyro_mag) - np.min(gyro_mag))
+        'gyr_jerk': float(np.max(gyro_mag) - np.min(gyro_mag)),
+        'acc_skew': float(skew(acc_mag, nan_policy='omit')) if np.var(acc_mag) > 1e-6 else 0.0,
+        'acc_kurtosis': float(kurtosis(acc_mag, nan_policy='omit')) if np.var(acc_mag) > 1e-6 else 0.0,
+        'gyr_skew': float(skew(gyro_mag, nan_policy='omit')) if np.var(gyro_mag) > 1e-6 else 0.0,
+        'gyr_kurtosis': float(kurtosis(gyro_mag, nan_policy='omit')) if np.var(gyro_mag) > 1e-6 else 0.0
     }
 
     return pd.DataFrame([features])
@@ -103,8 +108,8 @@ class MLService:
         # 3. Model Inference
         if self.model is not None:
             try:
-                # Ensure correct feature order
-                feature_order = ['acc_mean', 'acc_max', 'acc_min', 'acc_std', 'acc_jerk', 'gyr_mean', 'gyr_max', 'gyr_min', 'gyr_std', 'gyr_jerk']
+                # Ensure correct feature order matching updated training scripts
+                feature_order = ['acc_mean', 'acc_max', 'acc_min', 'acc_std', 'acc_jerk', 'gyr_mean', 'gyr_max', 'gyr_min', 'gyr_std', 'gyr_jerk', 'acc_skew', 'acc_kurtosis', 'gyr_skew', 'gyr_kurtosis']
                 X = features_df[feature_order]
                 
                 prediction = self.model.predict(X)[0]

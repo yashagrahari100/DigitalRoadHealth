@@ -7,6 +7,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 import joblib
 import matplotlib.pyplot as plt
 import seaborn as sns
+from scipy.stats import skew, kurtosis
 
 # Constants
 WINDOW_SIZE_SEC = 1.5
@@ -56,6 +57,12 @@ def extract_features(window_df):
     features['gyr_min'] = window_df['gyr_mag'].min()
     features['gyr_std'] = window_df['gyr_mag'].std()
     features['gyr_jerk'] = features['gyr_max'] - features['gyr_min']
+    
+    # Physics/Shape features (Asymmetry and Sharpness)
+    features['acc_skew'] = float(skew(window_df['acc_mag'], nan_policy='omit')) if window_df['acc_mag'].var() > 1e-6 else 0.0
+    features['acc_kurtosis'] = float(kurtosis(window_df['acc_mag'], nan_policy='omit')) if window_df['acc_mag'].var() > 1e-6 else 0.0
+    features['gyr_skew'] = float(skew(window_df['gyr_mag'], nan_policy='omit')) if window_df['gyr_mag'].var() > 1e-6 else 0.0
+    features['gyr_kurtosis'] = float(kurtosis(window_df['gyr_mag'], nan_policy='omit')) if window_df['gyr_mag'].var() > 1e-6 else 0.0
 
     return features
 
@@ -107,7 +114,8 @@ def process_session(base_path, session_name):
     return pd.DataFrame(X), np.array(y)
 
 def main():
-    base_path = "data/sessions"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    base_path = os.path.join(script_dir, "..", "data", "sessions")
     sessions = ['Camp', 'Peth'] # Strict use of manually labeled data only
     
     all_X = []
@@ -189,10 +197,10 @@ def main():
     print("Saved confusion_matrix.png to workspace.")
     
     # --- Export Model ---
-    os.makedirs('backend/app/models', exist_ok=True) # Ensure directory exists
-    joblib.dump(model, 'backend/app/models/random_forest_model.pkl')
-    # Save the feature names so the API always pushes the schema correctly
-    joblib.dump(X_train.columns.tolist(), 'backend/app/models/rf_features.pkl')
+    output_dir = os.path.join(script_dir, "..", "backend", "app", "models")
+    os.makedirs(output_dir, exist_ok=True) # Ensure directory exists
+    joblib.dump(model, os.path.join(output_dir, 'random_forest_model.pkl'))
+    joblib.dump(X_train.columns.tolist(), os.path.join(output_dir, 'rf_features.pkl'))
     print("Model saved to backend/app/models/random_forest_model.pkl")
 
 if __name__ == "__main__":

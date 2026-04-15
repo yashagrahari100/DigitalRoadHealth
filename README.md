@@ -2,13 +2,15 @@
   <h1>🛣️ Digital Road Health System</h1>
   <p><b>An AI-Powered, Edge-to-Cloud Infrastructure for Real-Time Pothole & Hazard Mapping</b></p>
 
-  > 📸 *[ ![alt text](image-1.png) ]* 
+  > 📸 *[ ![alt text](image.png) ]* 
 </div>
 
 <br>
 
 ## 🚀 Overview
 **Digital Road Health** is an end-to-end telemetry and machine learning ecosystem designed to automatically map road hazards (potholes and speedbreakers) in real-time. By leveraging raw IMU sensor data from standard Android smartphones mounted on vehicles, the system processes, classifies, and broadcasts geographical hazard data to a live web dashboard for municipality use.
+
+Website Link: https://digital-road-health.vercel.app/
 
 This project was built to solve a critical infrastructure problem: **How do we maintain road networks dynamically without relying on manual, expensive human surveys?**
 
