@@ -77,7 +77,7 @@ const MapDashboard = () => {
         let bgColor = 'bg-anomaly-pothole';
         let glowColor = 'bg-anomaly-pothole/40';
 
-        if (type === 'speed_breaker') {
+        if (type === 'speed_breaker' || type === 'speedbreaker') {
             bgColor = 'bg-anomaly-speed_breaker';
             glowColor = 'bg-anomaly-speed_breaker/40';
         } else {
@@ -109,7 +109,7 @@ const MapDashboard = () => {
     });
 
     const potholesCount = anomalies.filter(p => !p.anomaly_type || p.anomaly_type === 'pothole').length;
-    const speedBreakersCount = anomalies.filter(p => p.anomaly_type === 'speed_breaker').length;
+    const speedBreakersCount = anomalies.filter(p => p.anomaly_type === 'speed_breaker' || p.anomaly_type === 'speedbreaker').length;
     const highSeverityCount = anomalies.filter(p => (!p.anomaly_type || p.anomaly_type === 'pothole') && p.severity === 'High').length;
 
     // Theme Classes
@@ -287,14 +287,14 @@ const MapDashboard = () => {
                                     }}>
                                         <div>
                                             <div className="flex items-center space-x-2">
-                                                <span className={`text-xs font-bold uppercase tracking-wider ${(p.anomaly_type||'pothole') === 'speed_breaker' ? 'text-anomaly-speed_breaker' : 'text-anomaly-pothole'}`}>
+                                                <span className={`text-xs font-bold uppercase tracking-wider ${(p.anomaly_type||'pothole').replace('_', '') === 'speedbreaker' ? 'text-anomaly-speed_breaker' : 'text-anomaly-pothole'}`}>
                                                     {(p.anomaly_type||'pothole').replace('_', ' ')}
                                                 </span>
                                                 <span className={`text-[9px] px-1.5 py-0.5 rounded ${isDark ? 'bg-dark-700 text-gray-400' : 'bg-gray-100 text-gray-500'}`}>#{p.id}</span>
                                             </div>
                                             <p className={`text-[10px] mt-1 ${textMuted}`}>{new Date(p.timestamp).toLocaleTimeString()}</p>
                                         </div>
-                                        {p.anomaly_type !== 'speed_breaker' && (
+                                        {(p.anomaly_type || '').replace('_', '') !== 'speedbreaker' && (
                                             <span className={`text-[10px] px-2 py-1 rounded-md ${isDark ? 'bg-dark-700/50 text-gray-300' : 'bg-gray-50 text-gray-700'}`}>
                                                 Sev: {p.severity}
                                             </span>
